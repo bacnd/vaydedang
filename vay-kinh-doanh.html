@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no"/>
+		<title>Vay kinh doanh</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/fullpage.css">
+		<link rel="stylesheet" href="assets/css/chosen.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css?ver=1.51">
+	</head>
+	<body class="page">
+		<div id="wrapper">
+			<header id="header">
+		        <div class="container">
+	            	<div class="top-header">
+		                <h1 class="logo">
+		                	<a href="index.html"><img src="assets/images/commons/logo-big.png" alt="logo"></a>
+		                </h1>
+			            <div class="hd-right">
+			                <nav class="nav">
+			                    <ul class="nav-bar">
+			                        <li>
+			                            <a href="index.html">Trang chủ</a>
+			                        </li>
+			                        <li>
+			                            <a href="vay-mua-nha.html">Vay mua nhà</a>
+			                        </li>
+			                        <li>
+			                            <a href="vay-mua-oto.html">Vay mua ô tô</a>
+			                        </li>
+			                        <li>
+			                            <a href="vay-tieu-dung.html">Vay tiêu dùng</a>
+			                        </li>
+			                        <li class="current-menu-item">
+			                            <a href="vay-kinh-doanh.html">Vay kinh doanh</a>
+			                        </li>
+			                    </ul>
+			                </nav>
+			            </div>
+	                	<button id="navLine" class="nav-toggle">
+		                    <span></span>
+		                </button>
+			        </div>
+		        </div>
+		    </header>
+		    <main id="content">
+				<div class="main-page">
+					<div class="max-content">
+						<figure><img src="assets/images/main-vay-kinh-doanh.png" alt="vay mua nha"></figure>
+						<div class="main-page-info">
+							<h2 class="title-page">Kinh doanh thuận lợi<br />Nhanh chóng đổi đời</h2>
+							<ul>
+								<li class="plant"><strong>100%</strong> nhu cầu vốn</li>
+								<li class="calendar">Phê duyệt trong <strong>24h</strong></li>
+								<li class="money">Cấp vốn lên tới <strong>10 tỷ</strong></li>
+							</ul>
+							<div class="btn-action"><a href="#" data-popup-open="popup-register" class="btn-register">Đăng ký ngay</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="benefit">
+					<div class="container">
+						<h2 class="benefit-title">Lợi ích khi vay kinh doanh tại PVcomBank</h2>
+						<div class="benefit-body">
+							<div class="rows">
+								<div class="benefit-col">
+									<p><span class="clr-primary">Lãi suất</span><br />Từ 7,99%/năm</p>
+								</div>
+								<div class="benefit-col">
+									<p><span class="clr-primary">Thời gian vay</span><br />Lên tới 120 tháng</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="benefit-col">
+									<p><span class="clr-primary">Đối tượng Khách hàng</span><br />Doanh nghiệp siêu nhỏ<br />Hộ kinh doanh/Tiểu thương</p>
+								</div>
+								<div class="benefit-col">
+									<p><span class="clr-primary">Phương thức trả nợ</span><br />Linh hoạt</p>
+								</div>
+							</div>
+							<div class="rows">
+								<div class="benefit-col">
+									
+								</div>
+								<div class="benefit-col">
+									<p><span class="clr-primary">Thông tin khác</span><br />Phương án kinh doanh/Dự án đầu tư;<br />Giấy tờ chứng minh nguồn trả nợ;<br />Giấy tờ liên quan đến tài sản bảo đảm</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="estimates-faq">
+					<div class="container">
+						<div class="inner-estimates-faq">
+							<div class="estimates-faq-col">
+								<h2 class="estimates-faq-title">Dự tính khả năng vay kinh doanh</h2>
+								<form id="loan-calculate" action="#" method="post" role="form">
+									<div class="form-group">
+										<input type="text" id="loan_amount" name="amount" placeholder="Nhập số tiền vay (VND)" required="required" autocomplete="off" data-a-dec="," data-a-sep=".">
+									</div>
+									<div class="form-group">
+										<input type="text" id="loan_month" name="month" placeholder="Nhập thời hạn vay (năm)" required="required" data-rule-min="1" data-rule-max="10" autocomplete="off">
+										<label for="month" class="input-info" rel="tooltip">
+											<img src="assets/images/commons/ic-info-input.png">
+											<span class="right">
+										        <span>Tối thiểu: 1 năm<br />Tối đa: 10 năm</span>
+										        <i></i>
+										    </span>
+										</label>
+									</div>
+									<button id="btn-cal-loan">Xem kết quả <span class="spinner"></span></button>
+								</form>
+								<div class="result">
+									<div class="result-detail">
+										<h3 class="result-title">Kết quả 1</h3>
+										<div class="result-detai-content">
+											<p>Kỳ hạn vay: <strong>3 năm</strong></p>
+											<p>Lãi suất: <strong>16%</strong></p>
+											<p>Tiền trả hàng tháng: <br /><strong>3.000.000 VND</strong></p>
+											<div class="btn-loan-register"><a data-popup-open="popup-register" href="#">Đăng ký ngay</a></div>
+											<a  href="chi-tiet-khoan-vay.html" target="_blank" class="link-loan-detail">Xem chi tiết khoản vay</a>
+										</div>
+									</div>
+									<div class="result-detail dl-pc">
+										<h3 class="result-title">Kết quả 2</h3>
+										<div class="result-detai-content">
+											<p>Kỳ hạn vay: <strong>5 năm</strong></p>
+											<p>Lãi suất: <strong>16%</strong></p>
+											<p>Tiền trả hàng tháng: <br /><strong>2.000.000 VND</strong></p>
+											<div class="btn-loan-register"><a data-popup-open="popup-register" href="#">Đăng ký ngay</a></div>
+											<a  href="chi-tiet-khoan-vay.html" target="_blank" class="link-loan-detail">Xem chi tiết khoản vay</a>
+										</div>
+									</div>
+									<div class="result-detail dl-pc">
+										<h3 class="result-title">Kết quả 3</h3>
+										<div class="result-detai-content">
+											<p>Kỳ hạn vay: <strong>7 năm</strong></p>
+											<p>Lãi suất: <strong>16%</strong></p>
+											<p>Tiền trả hàng tháng: <br /><strong>1.000.000 VND</strong></p>
+											<div class="btn-loan-register"><a data-popup-open="popup-register" href="#">Đăng ký ngay</a></div>
+											<a  href="chi-tiet-khoan-vay.html" target="_blank" class="link-loan-detail">Xem chi tiết khoản vay</a>
+										</div>
+									</div>
+								</div>
+								<div class="btn-more-result dl-sp">Xem thêm kết quả khác</div>
+							</div>
+							<div class="estimates-faq-col">
+								<h2 class="estimates-faq-title">Câu hỏi thường gặp</h2>
+								<div class="faq-list">
+									<div class="faq-item">
+										<div class="faq-item-title">Câu hỏi 1</div>
+										<div class="faq-item-content"><p>Trả lời câu hỏi 2</p></div>
+									</div>
+									<div class="faq-item">
+										<div class="faq-item-title">Câu hỏi 2</div>
+										<div class="faq-item-content"><p>Trả lời câu hỏi 2</p></div>
+									</div>
+								</div>
+								<div class="send-question">
+									<form id="send-question" action="#" method="POST" role="form">
+										<textarea name="question_content" id="question-content" rows="5" required="required" placeholder="Hãy cho chúng tôi biết thắc mắc của bạn"></textarea>
+										<button type="submit" class="btn-send-question"><span class="spinner"></span> Gửi câu hỏi</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="toolbox-link dl-pc">
+					<ul class="tool-link">
+						<li data-popup-open="popup-register" class="message"><a href="#">Đăng ký ngay</a></li>
+					</ul>
+				</div>
+				<div class="popup-modal popup-register" data-popup="popup-register">
+					<div class="popup-inner">
+						<h4 class="popup-register-title">Đăng ký ngay</h4>
+						<form action="#" id="form-register" method="POST" role="form">
+							<div class="form-group required">
+								<input type="text" id="input-name" name="name" placeholder="Nhập họ và tên (bắt buộc)" required="required">
+								<label for="name" class="input-icon">
+									<img src="assets/images/commons/ic-user.png">
+								</label>
+							</div>
+							<div class="form-group required">
+								<input type="text" id="input-phone" name="phone" placeholder="Nhập số điện thoại (bắt buộc)" required="required">
+								<label for="phone" class="input-icon">
+									<img src="assets/images/commons/ic-phone.png">
+								</label>
+							</div>
+							<div class="form-group">
+								<input type="text" id="input-email" name="email" placeholder="Nhập Email">
+								<label for="email" class="input-icon">
+									<img src="assets/images/commons/ic-email.png">
+								</label>
+							</div>
+							<div class="form-group">
+								<select name="provinces" id="input-provinces">
+									<option value="">Chọn tỉnh thành</option>
+									<option value="Hà Nội">Hà Nội</option>
+									<option value="Đà Nẵng">Đà Nẵng</option>
+									<option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select name="loan-type" id="input-loan-type">
+									<option value="Vay mua nhà">Vay mua nhà</option>
+									<option value="Vay mua ô tô">Vay mua ô tô</option>
+									<option value="Vay tiêu dùng">Vay tiêu dùng</option>
+									<option value="Vay Kinh doanh">Vay Kinh doanh</option>
+								</select>
+							</div>
+
+							<button type="submit" id="btn-register-submit" class="btn-register btn-primary">Đăng ký <span class="spinner"></span></button>
+						</form>
+						
+						<a class="popup-close" data-popup-close="popup-register" href="#"><img src="assets/images/commons/ic-close-form.png"></a>
+					</div>
+				</div>
+				<div class="advisory-register dl-sp">
+					<div class="inner-advisory-register">
+						<a href="#" data-popup-open="popup-register" title="Đăng ký ngay">Đăng ký ngay</a>
+					</div>
+				</div>
+			</main>
+			<footer id="footer">
+				<div class="container">
+					<div class="ft-content">
+						<div class="ft-col">
+							<p>Bản quyền © 2019 thuộc về Ngân hàng TMCP Đại Chúng Việt Nam PVcomBank</p>
+						</div>
+						<div class="ft-col">
+							<p>Hotline: 1900 5555 92</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+		<script src="assets/js/fullpage.js"></script>
+		<script src="assets/js/autoNumeric.js"></script>
+		<script src="assets/js/chosen.jquery.min.js"></script>
+		<script src="assets/js/customs.js?ver=1.51"></script>
+		<script>
+			$(document).ready(function() {
+			    $("input[name='amount']").autoNumeric('init', {
+			        mDec: 0
+			    });
+			});
+			$("#input-provinces, #input-loan-type").chosen();
+		</script>
+	</body>
+</html>

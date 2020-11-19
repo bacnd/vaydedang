@@ -1,0 +1,284 @@
+#wrapper {
+	#header {
+	    position: fixed;
+	    z-index: 999;
+	    width: 100%;
+	    transition: all 0.5s;
+		.top-header {
+			@include dlflex;
+		    align-items: center;
+		    justify-content: space-between;
+		    .logo {
+			    margin: .5em 0;
+			    img {
+			    	width: 142px;
+			    	transition: all 1s ease;
+	    	    	-webkit-transition: all 1s ease;
+			    }
+			    @media screen and (max-width: $screen-sp) {
+			    	width: 77px;
+			    	margin: .15em auto;
+			    }
+			}
+			.hd-right {
+				nav {
+					.nav-bar {
+						@include dlflex;
+					    // margin-top: 4px;
+					    @media screen and (max-width: $screen-sp) {
+					    	flex-direction: column;
+					    }
+						li {
+							@media screen and (max-width: $screen-sp) {
+						    	border-bottom: 1px solid #ffffff35;
+						    	margin: 0 !important;
+						    	padding: 14px 0;
+						    }
+							a {
+								color: #4e4e50;
+								position: relative;
+								text-transform: uppercase;
+								@media screen and (max-width: $screen-sp) {
+							    	color: $clr-white;
+							    }
+								&:before, &:after {
+									position: absolute;
+									-webkit-transition: all 0.35s ease;
+									transition: all 0.35s ease;
+								}
+								&:before {
+									bottom: -11px;
+									display: block;
+									height: 4px;
+									width: 0%;
+									content: "";
+									background: #4e4e50;
+									@media screen and (max-width: $screen-sp) {
+								    	content: none;
+								    }
+								}
+								// &:after {
+								// 	left: 0;
+								// 	top: -12px;
+								// 	padding: 0.5em 0;
+								// 	position: absolute;
+								// 	content: attr(data-hover);
+								// 	white-space: nowrap;
+								// 	max-width: 0%;
+								// 	overflow: hidden;
+								// 	font-weight: 600;
+								// 	@media screen and (max-width: $screen-sp) {
+								//     	content: none;
+								//     }
+								// }
+								
+								&:hover:before {
+									opacity: 1;
+									width: 100%;
+								}
+
+								&:hover:after {
+									max-width: 100%;
+								}
+
+								&:hover {
+									opacity: 1;
+								}
+							}
+							&.current-menu-item a:before {
+								opacity: 1;
+								width: 100%;
+							}
+							&.current-menu-item {
+								font-weight: 600;
+							}
+							&:not(:last-child) {
+								margin-right: 25px;
+								@media screen and (max-width: 840px) {
+							    	margin-right: 8px;
+							    }
+							}
+						}
+					}
+				}
+				@media screen and (max-width: $screen-sp) {
+					background: rgba(241, 188, 18, .8);
+				    position: absolute;
+				    width: 100%;
+				    max-width: 768px;
+				    height: auto;
+				    margin-top: 56px;
+    				left: 0;
+				    top: 0;
+				    z-index: 99;
+				    -webkit-transform: translate3d(100%, 0, 0);
+				    -ms-transform: translate3d(100%, 0, 0);
+				    -moz-transform: translate3d(100%, 0, 0);
+				    transform: translate3d(100%, 0, 0);
+				    -webkit-transition: transform 0.4s ease;
+				    -ms-transition: transform 0.4s ease;
+				    -moz-transition: transform 0.4s ease;
+				    transition: transform 0.4s ease;
+				    padding: 0 10px;
+				    &.nav-active {
+					    -webkit-transform: translate3d(0, 0, 0);
+					    -ms-transform: translate3d(0, 0, 0);
+					    -moz-transform: translate3d(0, 0, 0);
+					    transform: translate3d(0, 0, 0);
+					}
+				}
+			}
+			.nav-toggle {
+		        background-color: transparent;
+		        color: #4c4c4e;
+		        border: none;
+		        line-height: 0;
+		        display: inline-block;
+		        position: absolute;
+		        width: 30px;
+		        height: 30px;
+		        padding: 0;
+		        margin: 0;
+		        cursor: pointer;
+		        outline: none;
+		        z-index: 999;
+	            display: none;
+	            right: 20px;
+				@media screen and (max-width: $screen-sp) {
+					display: block;
+				}
+		        span {
+		            background-color: #4c4c4e;
+		            height: 4px;
+		            border-radius: 0;
+		            position: relative;
+		            display: block;
+		            width: 30px;
+		            @include transition(0.3s all ease);
+		            &:before, &:after{
+		                background-color: #4c4c4e;
+		                content: "";
+		                position: absolute;
+		                width: 30px;
+		                height: 4px;
+		                left: 0;
+		                top: -10px;
+		                border-radius: 0;
+		                @include transition(0.3s all ease);
+		                -webkit-transition-duration: 0.3s, 0.3s, .3s;
+		                transition-duration: 0.3s, 0.3s, .3s;
+		                -webkit-transition-delay: 0.3s, 0s, .3s;
+		                transition-delay: 0.3s, 0s, .3s;
+		                -webkit-transition-property: top, -webkit-transform, width;
+		                transition-property: top, transform, width;
+		                transform-origin: center;
+		            }
+		            &:after {
+		                top: 10px;
+		            }
+		        }
+		        &.active {
+		            span {
+		                background: transparent;
+		                right: 0;
+		                left: auto;
+		                @include transition(background 0.3s 0s ease);
+		                &:before, &:after {
+		                    top: 0;
+		                    right: 0;
+		                    left: auto;
+		                    width: 30px;
+		                    -webkit-transition-delay: 0s, 0.3s;
+		                    transition-delay: 0s, 0.3s;
+		                }
+		                &:before{
+		                    @include transform(rotate(45deg));
+		                }
+		                &:after{
+		                    @include transform(rotate(-45deg));
+		                }
+		            }
+		        }
+		        small {
+		            display: none;
+		        }
+		    }
+		  //   @media screen and (max-width: 749px) {
+				// .nav-toggle {
+		  //           width: 35px;
+		  //           height: 35px;
+		  //           span {
+		  //               width: 35px;
+		  //               height: 3px;
+		  //               &:before, &:after {
+		  //                   width: 35px;
+		  //                   height: 3px;
+		  //               }
+		  //           }
+		  //           &.active {
+		  //               span {
+		  //                   &:before, &:after {
+		  //                       width: 35px;
+		  //                   }
+		  //               }
+		  //           }
+		  //       }
+		  //   }
+	   //      @media screen and (max-width: 576px) {
+		  //       .nav-toggle {
+		  //           width: 30px;
+		  //           height: 30px;
+		  //           span {
+		  //               width: 30px;
+		  //               height: 3px;
+		  //               &:before, &:after {
+		  //                   width: 30px;
+		  //                   height: 3px;
+		  //               }
+		  //           }
+		  //           &.active {
+		  //               span {
+		  //                   &:before, &:after {
+		  //                       width: 30px;
+		  //                   }
+		  //               }
+		  //           }
+		  //       }
+		  //   }
+		  //   @media screen and (max-width: 480px) {
+		  //       .nav-toggle {
+		  //           width: 25px;
+		  //           height: 25px;
+		  //           span {
+		  //               width: 25px;
+		  //               &:before, &:after {
+		  //                   width: 25px;
+		  //               }
+		  //               &:before {
+		  //                   top: -10px;
+		  //               }
+		  //               &:after {
+		  //                   top: 10px;
+		  //               }
+		  //           }
+		  //           &.active {
+		  //               span {
+		  //                   &:before, &:after {
+		  //                       width: 25px;
+		  //                   }
+		  //               }
+		  //           }
+		  //       }
+		  //   }
+		}
+		&.scroll-down {
+		    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.13);
+		    background: $clr-primary;
+		    img {
+		    	width: 100px !important;
+		    	transition: all 1s ease;
+	    	    -webkit-transition: all 1s ease;
+		    }
+		}
+	}
+}

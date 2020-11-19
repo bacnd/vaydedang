@@ -1,0 +1,42 @@
+footer, .box-ft {
+    background: $clr-blue;
+    &.fix-footer {
+		position: fixed;
+	    bottom: 0;
+	    width: 100%;
+    }
+    .container {
+    	padding: 0 10px;
+    }
+	.ft-content {
+    	height: 69px;
+		@include dlflex;
+		align-items: center;
+    	justify-content: space-between;
+    	color: $clr-white;
+    	font-size: 14px;
+    	padding-top: 5px;
+		a {
+			color: $clr-white;
+		}
+    	@media screen and (max-width: $screen-sp) {
+    		height: auto;
+	    	flex-direction: column;
+	    	justify-content: center;
+	    	.ft-col {
+	    		text-align: center;
+	    		&:first-child {
+	    			order: 2;
+	    			font-size: 10px;
+	    		}
+	    		&:last-child {
+	    			order: 1;
+	    			font-size: 12px;
+	    		}
+	    		p {
+	    			margin: 0 0 .5rem;
+	    		}
+	    	}
+	    }
+	}
+}
